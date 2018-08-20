@@ -71,8 +71,8 @@
                     </div>
                     <!-- navigation elements -->
                     <ul class="list-group list-unstyled components">
-                        <li class="list-group-item nav-item active">
-                            <a href="#" data-toggle="modal" data-target="#modalContactform">Contact Find New Words</a> 
+                        <li class="list-group-item nav-item">
+                            <a href="#" data-toggle="modal" data-target="#modalContactform" data-dismiss="#sidebar">Contact Find New Words</a> 
                         </li>
                         <li class="list-group-item nav-item">
                             <a href="#" data-toggle="modal" data-target="#modalAddNewWordform">Add a New Word</a>
@@ -338,6 +338,7 @@
             </div>
         </div>
 <!-- ******************************************************* -->
+<div class="container">
 
     <!-- New Word List Modal -->
     <div class="modal fade" id="modalNewWordList" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
@@ -356,7 +357,7 @@
 
                                     <div id="accordion" class="col">
                                         <!-- Level one - cleate a card for each "Original word" -->
-                                        <h1>New Words</h1>
+                                        <h3>New Words</h3>
                                         <div class="card">
                             
                                             <div class="card-header originalWord" id="headingOne">
@@ -379,7 +380,7 @@
                                                     <div class="card">
                                                         <div class="card-header">
                                                             <div class="col-sm-12  float-left">
-                                                                <a href="#commentsModal" data-toggle="modal">Word 1</a>
+                                                                <a href="#commentsModal" data-toggle="modal" data-target="#commentsModal" data-dismiss="modal">Word 1</a>
                                                                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
                                                             </div>
                                                             
@@ -542,7 +543,10 @@
           
                 <!-- Modal Header -->
                 <div class="modal-header">
+                  <!-- back button -->
+                  <a href="#" data-toggle="modal" data-target="#modalNewWordList" data-dismiss="modal"><i class="fas fa-angle-double-left"></i></a>
                   <h4 class="modal-title">Comments {word}</h4>
+                  <!-- close button -->
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
           
@@ -601,27 +605,7 @@
             </div>
           </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div> <!-- end of container - 2 modals inside -->
 
 
 

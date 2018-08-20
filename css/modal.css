@@ -2,10 +2,9 @@
 .modal-lg {
     width: 90% !important;
     }
-#modalforms h5, p {
+.modal h1, h2, h3, h4, h5, p {
     color: black;
 }
-
 
 .modal .subscribe {
     margin-top: 10px;
