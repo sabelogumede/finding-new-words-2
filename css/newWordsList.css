@@ -1,0 +1,38 @@
+#accordion {
+    padding-top: 5px;
+}
+.accordion .card-header:after {
+    font-family: 'FontAwesome';
+    content: "\f0f8";
+    float: right;
+}
+
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panel */
+    content: "\f067";
+}
+
+.vote .media-body {
+    padding-top: 25px;
+}
+.blue-text {
+    color: blue;
+    /* color: yellow; */
+    
+}
+.gray-text {
+    color: gray;
+}
+.originalWord {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+.originalWord h3,p {
+    margin-bottom: 0 !important;
+
+}
+
+.originalWord .btn {
+    border: 0 !important;
+    padding: 0 !important;
+}
