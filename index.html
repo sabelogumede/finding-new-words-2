@@ -91,22 +91,22 @@
                             <a href="#" id="sidebarClose" data-toggle="modal" data-target="#modalContactform">Contact Find New Words</a> 
                         </li>
                         <li class="list-group-item nav-item">
-                            <a href="#" data-toggle="modal" data-target="#modalAddNewWordform">Add a New Word</a>
+                            <a href="#" id="sidebarClose" data-toggle="modal" data-target="#modalAddNewWordform">Add a New Word</a>
                         </li>
                         <!-- disabled -->
                         <li class="list-group-item nav-item ">
-                            <a data-toggle="collapse" href="#" data-target="#modalList" aria-expanded="false" aria-controls="modalList">New Words List</a>
+                            <a id="sidebarClose" data-toggle="collapse" href="#" data-target="#modalList" aria-expanded="false" aria-controls="modalList">New Words List</a>
                         </li>
                         <li class="list-group-item nav-item">
-                            <a href="#" data-toggle="modal" data-target="#modalTerms">Terms & Conditions</a>
+                            <a id="sidebarClose" href="#" data-toggle="modal" data-target="#modalTerms">Terms & Conditions</a>
                         </li>
                         <li class="list-group-item nav-item">
-                            <a href="#" data-toggle="modal" data-target="#modalPolicy">Privacy Policy</a>
+                            <a id="sidebarClose" href="#" data-toggle="modal" data-target="#modalPolicy">Privacy Policy</a>
                         </li>
                          <!--social media  -->
                         <li class="list-group-item nav-item">
-                            <a href="#twitterSection"><i class="fab fa-twitter"></i></a>
-                            <a id="leftPadding" href="#facebookSection"><i class="fab fa-facebook-f line"></i></a>    
+                            <a id="sidebarClose" href="#twitterSection"><i class="fab fa-twitter"></i></a>
+                            <a id="sidebarClose" id="leftPadding" href="#facebookSection"><i class="fab fa-facebook-f line"></i></a>    
                         </li>
                         <!-- <li class="list-group-item nav-item">
                             <a id="leftPadding" href="#facebookSection"><i class="fab fa-facebook-f line"></i></a> 
@@ -748,19 +748,19 @@
 
                 $('#sidebarCollapse').on('click', function () {
                     $('#sidebar').toggleClass('active');
-                    $('.collapse.in').toggleClass('in');
-                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                    // $('.collapse.in').toggleClass('in');
+                    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });
 
-                $('#sidebarClose').on('click', function(){
-                    $('#sidebar').toggleClass('active');
-                });
-
-                // $('.nav-item').click(function() {
-                //     // find('#sidebar').removeClass('.active');
-                //     $(window).find('#sidebar').removeClass('active');
-                    
+                // $('#sidebarClose').on('click', function(){
+                //     $('#sidebar').toggleClass('active');
                 // });
+
+                $('.nav-item').on('click', function(){
+                    $('#sidebar').removeClass('active');
+                    // $(window).find('#sidebar').removeClass('active');
+                    
+                });
 
             });
         </script>
