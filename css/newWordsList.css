@@ -29,10 +29,14 @@
 }
 .originalWord h3,p {
     margin-bottom: 0 !important;
-
+    font-size: 1em;
 }
 
 .originalWord .btn {
     border: 0 !important;
     padding: 0 !important;
+}
+
+.card .card-header {
+    /* padding: 20px 0 20px 0; */
 }
