@@ -15,7 +15,7 @@ body {
 #homeSection h1, h2, h3, h4, h5 {
     /* font-family: 'Poppins', sans-serif; */
     font-family: 'Fjalla One', sans-serif;
-    color: #fff !important;
+    color: #fff;
 }
 #homeSection h1 {
     font-weight: 700;
@@ -129,6 +129,10 @@ a, a:hover, a:focus {
 #dv-3 {
     margin-top: 55px;
 }
+
+/* #dv-3 btn{
+    margin-top: 55px;
+} */
 
 
 /* ---------------------------------------------------

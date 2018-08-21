@@ -45,6 +45,22 @@
                 font-size: 60px;
             }
         </style>
+        <!-- nav drawer -->
+        <script>
+            
+            // $(document).ready(function() {
+
+            //     // $('.nav-item').click(function() {
+            //     //     $('.sidebar').hide();
+            //     // });
+
+            //     $('.nav-item').click(function() {
+            //         $('.sidebar').hide();
+            //     });
+
+            // });
+        
+        </script>
 
     </head>
     <body>
@@ -67,25 +83,34 @@
                 <!-- Sidebar Holder -->
                 <nav id="sidebar">
                     <div class="sidebar-header">
-                        <a href="#" id="sidebarClose">CLOSE <i class="fas fa-times"></i></a>
+                        <a href="#" id="sidebarClose" >CLOSE <i class="fas fa-times"></i></a>
                     </div>
                     <!-- navigation elements -->
                     <ul class="list-group list-unstyled components">
                         <li class="list-group-item nav-item">
-                            <a href="#" data-toggle="modal" data-target="#modalContactform" data-dismiss="#sidebar">Contact Find New Words</a> 
+                            <a href="#" id="sidebarClose" data-toggle="modal" data-target="#modalContactform">Contact Find New Words</a> 
                         </li>
                         <li class="list-group-item nav-item">
                             <a href="#" data-toggle="modal" data-target="#modalAddNewWordform">Add a New Word</a>
                         </li>
-                        <li class="list-group-item nav-item disabled">
-                            <a href="#" data-toggle="modal" data-target="#modalNewWordList">New Words List</a>
+                        <!-- disabled -->
+                        <li class="list-group-item nav-item ">
+                            <a data-toggle="collapse" href="#" data-target="#modalList" aria-expanded="false" aria-controls="modalList">New Words List</a>
                         </li>
                         <li class="list-group-item nav-item">
-                            <a href="#">Terms & Conditions</a>
+                            <a href="#" data-toggle="modal" data-target="#modalTerms">Terms & Conditions</a>
                         </li>
                         <li class="list-group-item nav-item">
-                            <a href="#">Privacy Policy</a>
-                        </li> 
+                            <a href="#" data-toggle="modal" data-target="#modalPolicy">Privacy Policy</a>
+                        </li>
+                         <!--social media  -->
+                        <li class="list-group-item nav-item">
+                            <a href="#twitterSection"><i class="fab fa-twitter"></i></a>
+                            <a id="leftPadding" href="#facebookSection"><i class="fab fa-facebook-f line"></i></a>    
+                        </li>
+                        <!-- <li class="list-group-item nav-item">
+                            <a id="leftPadding" href="#facebookSection"><i class="fab fa-facebook-f line"></i></a> 
+                        </li> -->
                      </ul>
                 </nav>
                 
@@ -114,7 +139,6 @@
                             <!-- button -->
                             <button href="#" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalContactform">Add A New Word</button>
                             
-
                         </div>
                     </div>
                    
@@ -127,10 +151,10 @@
         <div class="container-fluid">
             <!-- Terms & condition section -->
             <div class="home-content-copywrite col text-right">
-                <a href="#Terms" class="float-right">
+                <a href="#Terms" data-toggle="modal" data-target="#modalTerms" class="float-right">
                     <span>Terms & Conditions</span>
                 </a>
-                <a href="#Policy" class="float-right">
+                <a href="#Policy" data-toggle="modal" data-target="#modalPolicy" class="float-right">
                     <span>Privacy Policy</span>
                 </a>
             </div>
@@ -138,16 +162,7 @@
 
     </div>   
      
-    <!-- wordListSection -->
-    <div id="wordListSection">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" style="height: 500px; background-color: aqua">
-                    <h1>Word list Section</h1>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- social section -->
     <div id="twitterSection">
         <div class="container">
@@ -238,7 +253,6 @@
                                             <!--Grid column-->
                             
                                 </div>
-
 
                                 <!-- form container -->
 
@@ -340,13 +354,15 @@
 <!-- ******************************************************* -->
 <div class="container">
 
-    <!-- New Word List Modal -->
-    <div class="modal fade" id="modalNewWordList" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+    <div class="modal fade" id="modalList" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+
+            <!-- New Word List Modal -->
+            <div class="modal-dialog modal-lg modalNewWordList" id="modalNewWordList" role="document">
                 <div class="modal-content">
                     <div class="modal-header text-center">
                         <h5 class="modal-title" id="myModal">New Word List</h5>
                         <button>
+                            <!-- <span id="modalWordsList" aria-hidden="true" data-dismiss="modal">&times;</span> -->
                             <span aria-hidden="true" data-dismiss="modal">&times;</span>
                         </button>
                     </div>
@@ -357,7 +373,6 @@
 
                                     <div id="accordion" class="col">
                                         <!-- Level one - cleate a card for each "Original word" -->
-                                        <h3>New Words</h3>
                                         <div class="card">
                             
                                             <div class="card-header originalWord" id="headingOne">
@@ -374,13 +389,13 @@
                                                 </div>
                                             </div>
                                             <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
-                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                                 <!-- nested child div -->
                                                 <div class="card-body" id="child1">
                                                     <div class="card">
                                                         <div class="card-header">
                                                             <div class="col-sm-12  float-left">
-                                                                <a href="#commentsModal" data-toggle="modal" data-target="#commentsModal" data-dismiss="modal">Word 1</a>
+                                                                <a id="word" href="#">Word 1</a>
                                                                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
                                                             </div>
                                                             
@@ -442,7 +457,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
-                                                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                                     <!-- nested child div -->
                                                     <div class="card-body" id="child2">
                                                         <div class="card">
@@ -532,80 +547,160 @@
                     </div>
                 </div>
             </div>
+            <!-- comments modal -->
+            <div class="modal-dialog modal-lg comments">
+                    <div class="modal-content">
+                
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <!-- back button -->
+                        <a href="#" id="backTowords" ><i class="fas fa-angle-double-left"></i></a>
+                        <h4 class="modal-title">Comments {word}</h4>
+                        <!-- close button -->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <!-- ##### -->
+          
+                          <ul>
+                              <li class="container darker">
+                                  <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                  <i class="fal fa-check"></i>
+                              </li>
+          
+                              <li class="container darker">
+                                  <a href="#" class="text-right small"><i class="fal fa-check"></i> Reply</a>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                  <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                              </li>
+          
+                              <li class="container darker"> 
+                                  <span class="small time-left"><a href="#">user</a> Today, 11:00</span><br>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                  <a href="#" class="text-left small"><i class="ion-reply"></i> Reply</a>
+                              </li>
+          
+                              <li class="container"> 
+                                  <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                  <span class="time-right small"><a href="#">user</a> Today, 11:00</span>
+                              </li>
+          
+                              <li class="container"> 
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                  <span class="time-right small"><a href="#">user</a> Today, 11:00</span>
+                              </li>
+
+                              <li class="container darker">
+                                    <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                    <i class="fal fa-check"></i>
+                              </li>
+
+                              <li class="container darker">
+                                     <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                     <i class="fal fa-check"></i>
+                              </li>
+
+                              <li class="container darker">
+                                    <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                    <i class="fal fa-check"></i>
+                              </li>
+          
+                          </ul>
+                          <!-- ### -->
+                      </div> 
+                      <!-- end of modal body -->
+          
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                          <!-- comment form area -->
+                          <form class="form-group shadow-textarea">
+                              <!-- <textarea name="wordComment" id="comment" rows="1" wrap="soft"></textarea> -->
+                              <input type="text" class="form-control" id="exampleFormControlTextarea6" placeholder="Write comment here...">
+                              <button type="button" class="btn btn-danger">Post</button>
+                              <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Submit</button> -->
+                          </form>
+                      </div>
+                      <!-- end of footer -->
+                    </div>
+          
+                  </div>
+
+
+
         </div>
+        <!-- End of Modal Wrap -->
+
         <!-- *********************************** -->
         
         <!-- Comments Modal -->
         <!-- The Modal -->
-      <div class="modal modal-dialog" id="commentsModal"; style="overflow-y: scroll; max-height:85%; margin-top: 50px; margin-bottom:50px;">
-            <div class="modal-dialog">
-              <div class="modal-content">
-          
-                <!-- Modal Header -->
-                <div class="modal-header">
-                  <!-- back button -->
-                  <a href="#" data-toggle="modal" data-target="#modalNewWordList" data-dismiss="modal"><i class="fas fa-angle-double-left"></i></a>
-                  <h4 class="modal-title">Comments {word}</h4>
-                  <!-- close button -->
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <!-- <div class="modal modal-dialog" id="commentsModal"; style="overflow-y: scroll; max-height:85%; margin-top: 50px; margin-bottom:50px;"> -->
+
+
+    </div> <!-- end of container - 2 modals inside -->
+
+        <!-- *******************Privacy Policy******************* -->
+
+        <!-- Private Policy Modal -->
+        <div class="modal fade" id="modalPolicy" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title" id="myModal">Privacy Policy</h5>
+                        <button>
+                            <span aria-hidden="true" data-dismiss="modal">&times;</span>
+                        </button>
+                    </div>
+                    <!-- modal body -->
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies turpis ut fringilla pretium.
+                            Nam non est id libero convallis sodales ut a arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                            Integer in odio urna. Duis vestibulum rutrum arcu, ut placerat libero rhoncus sit amet. Morbi posuere, orci semper sodales convallis,
+                             sem massa elementum dolor, vitae pretium erat velit in arcu. Integer in nisi lectus. In pharetra magna a iaculis pellentesque.</p>
+                    </div>
+                    <!-- end of modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Agree</button>
+                    </div>
                 </div>
-          
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <!-- ##### -->
-    
-                    <ul>
-                        <li class="container darker">
-                            <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
-                            <i class="fal fa-check"></i>
-                        </li>
-    
-                        <li class="container darker">
-                            <a href="#" class="text-right small"><i class="fal fa-check"></i> Reply</a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
-                            <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
-                        </li>
-    
-                        <li class="container darker"> 
-                            <span class="small time-left"><a href="#">user</a> Today, 11:00</span><br>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
-                            <a href="#" class="text-left small"><i class="ion-reply"></i> Reply</a>
-                        </li>
-    
-                        <li class="container"> 
-                            <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
-                            <span class="time-right small"><a href="#">user</a> Today, 11:00</span>
-                        </li>
-    
-                        <li class="container"> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
-                            <span class="time-right small"><a href="#">user</a> Today, 11:00</span>
-                        </li>
-    
-                    </ul>
-                    <!-- ### -->
-                </div> 
-                <!-- end of modal body -->
-    
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <!-- comment form area -->
-                    <form class="form-group shadow-textarea">
-                        <textarea name="wordComment" id="comment" rows="1" wrap="soft"></textarea>
-                        <input type="text" class="form-control" id="exampleFormControlTextarea6" placeholder="Write comment here...">
-                        <button type="button" class="btn btn-danger">Post</button>
-                        <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Submit</button> -->
-                    </form>
+            </div>
+
+        </div>
+        <!--  -->
+
+        <div class="modal fade" id="modalTerms" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h5 class="modal-title" id="myModal">Terms & Conditiony</h5>
+                            <button>
+                                <span aria-hidden="true" data-dismiss="modal">&times;</span>
+                            </button>
+                        </div>
+                        <!-- modal body -->
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies turpis ut fringilla pretium.
+                                Nam non est id libero convallis sodales ut a arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                                Integer in odio urna. Duis vestibulum rutrum arcu, ut placerat libero rhoncus sit amet. Morbi posuere, orci semper sodales convallis,
+                                 sem massa elementum dolor, vitae pretium erat velit in arcu. Integer in nisi lectus. In pharetra magna a iaculis pellentesque.</p>
+                        </div>
+                        <!-- end of modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Agree</button>
+                        </div>
+                    </div>
                 </div>
-                <!-- end of footer -->
-              </div>
     
             </div>
-          </div>
-
-        </div> <!-- end of container - 2 modals inside -->
 
 
 
@@ -644,20 +739,28 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
           <!-- Smooth Scroll -->
         <script src="js/smooth-scroll.js"></script>
+        <script src="js/modalListWord.js"></script>
+        <!-- <script src="js/navbar.js"></script> -->
 
-        <!-- slide-in-bar -->
+        <!-- sidebar -->
         <script type="text/javascript">
             $(document).ready(function () {
 
                 $('#sidebarCollapse').on('click', function () {
                     $('#sidebar').toggleClass('active');
-                    // $('.collapse.in').toggleClass('in');
-                    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });
 
                 $('#sidebarClose').on('click', function(){
                     $('#sidebar').toggleClass('active');
                 });
+
+                // $('.nav-item').click(function() {
+                //     // find('#sidebar').removeClass('.active');
+                //     $(window).find('#sidebar').removeClass('active');
+                    
+                // });
 
             });
         </script>
