@@ -25,11 +25,21 @@ padding-left: 0.8rem;
     overflow-y: initial !important
 }
 .modal-body{
-/* height: 250px; */
 height: 500px;
 overflow-y: auto;
 }
 .modal-body ul {
     list-style: none;
     padding: 0;
+}
+
+
+/*  */
+
+@media (max-width: 375px) {
+  
+    .modal-body {
+        height: 90%;
+    }
+
 }

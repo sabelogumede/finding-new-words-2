@@ -10,3 +10,13 @@
     margin-top: 10px;
     padding: 0;
 }
+
+@media (max-width: 375px) { 
+   
+    .modal-lg {
+        height: 90% !important;
+        }
+    
+
+
+}

@@ -248,9 +248,9 @@ a.article, a.article:hover {
 }
 
 
-#paragraphTwo {
+/* #paragraphTwo {
     color: #0a8df8;
-}
+} */
 
 
 /* copy write */
@@ -302,6 +302,7 @@ a.article, a.article:hover {
 
     #dv-3 {
         margin-top: 32px;
+        padding-right: 2px;
     }
     #dv-3 h1 {
     font-family: 'Fjalla One', sans-serif;
@@ -355,6 +356,57 @@ a.article, a.article:hover {
     #sidebar .fas {
         font-size: 20px;
     }
+
+    /* copy write */
+    .home-content-copywrite {
+        margin-top: 2rem;
+        bottom: 1rem;
+    }
+
+    .home-content-copywrite a {
+        font-size: 0.5rem;
+        letter-spacing: 0.2rem;
+        line-height: 1rem;
+        padding-left: 2.5rem;
+    }
+
+    #socialMedia h2 {
+        font-size: 1.4em;
+        margin-top: 8px;
+    }
+    /* Footer */
+
+    footer {
+        margin-top: 10px;
+        text-align: center;
+    }
+    footer p {
+        font-size: 0.7em;
+        color: #fff;
+        padding: 5px 10px 5px 10px;
+    }
+    /* Modal */
+    .modal p {
+        font-size: 0.6rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    .modal h5 {
+        font-size: 0.9rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    .container {
+        padding-right: 0px !important;
+    }
+    .modal.full {
+        max-height: 90% !important;
+    }
+    .modal-title {
+        font-size: 1em;
+    }
+    .form-group{
+        margin-bottom: 0.7em;
+    }
+ 
 
 
  }
