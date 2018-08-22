@@ -279,16 +279,21 @@ a.article, a.article:hover {
 /* Mobile */
 @media (max-width: 375px) { 
    
+    #topnav .container-fluid{
+        padding: 0 5px 0 5px !important;
+    }
+
     #topnav img {
         width: 60px;
     }
 
     .navbar {
         margin-bottom: 0;
+        padding-bottom: 0; 
     }
 
     #dv-2 {
-        padding-top: 10px;
+        padding-top: 0;
     }
 
     #dv-2 img {
@@ -296,7 +301,7 @@ a.article, a.article:hover {
     }
 
     #dv-3 {
-        margin-top: 34px;
+        margin-top: 32px;
     }
     #dv-3 h1 {
     font-family: 'Fjalla One', sans-serif;
@@ -320,6 +325,35 @@ a.article, a.article:hover {
 
     #topnav .line { 
         border-right: none;  
+    }
+
+    /* Sidebar */
+    #sidebar {
+        width: 250px;
+        right: -250px;
+    }
+    #sidebar ul.components {
+        padding: 5px 0;
+        /* border-bottom: 1px solid #47748b; */
+    }
+    #sidebar .sidebar-header {
+        margin-bottom: 60px!important;
+    }
+    #sidebar ul li a {
+        padding: 10px 5px 10px 20px;
+        font-size: 0.9em;
+    }
+    #sidebar .sidebar-header a{
+        padding-right: 10px;
+        letter-spacing: 1px;
+    }
+
+    #sidebar .sidebar-header a {
+        padding: 5px 10px 5px 5px;
+        font-size: 0.9em;
+    }
+    #sidebar .fas {
+        font-size: 20px;
     }
 
 

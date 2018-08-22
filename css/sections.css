@@ -9,18 +9,15 @@
     margin-top: 40px;
 }
 
-/* #wordListSection{
+/* Media Queries */
+
+@media (max-width: 375px) {
+
+    #homeSection button{
+        width: 150px;
+        margin-top: 30px;
+    }
+
+
 
 }
-
-#twitterSection{
-
-}
-
-#facebookSection {
-
-}
-
-#footer{
-
-} */
